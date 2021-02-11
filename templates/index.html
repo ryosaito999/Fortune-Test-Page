@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Welcome to FlaskBlog {% endblock %}</h1>
+
+    <form action="{{ url_for('submit_fortune') }}" method="post">
+    <div class="input-group mb-3">
+        <input type="text" name="fortune_entry" class="form-control" aria-label="Enter your own fortune here" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button type="submit" class="btn btn-outline-secondary" type="button">Submit!</button>
+        </div>
+    </div>
+    </form>
+      
+    {% for fortune in fortune_list %}
+    <a href="#">
+        <h5>{{ fortune[1] }}</h5>
+    </a>
+    <hr>
+    {% endfor %}
+{% endblock %}
