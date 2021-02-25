@@ -16,5 +16,7 @@ COPY templates/ ./templates
 COPY config.py .
 COPY fortune.py .
 
+EXPOSE 5000/tcp
+
 # command to run on container start
 CMD [ "python", "./fortune.py" ]
