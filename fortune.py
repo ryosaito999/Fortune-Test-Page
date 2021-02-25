@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, url_for, flash, redirect
 from flaskext.mysql import MySQL
 import random
+import fortune_cookie
 
 app = Flask(__name__, instance_relative_config=True)
 mysql = MySQL()
